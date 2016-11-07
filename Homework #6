@@ -29,27 +29,29 @@ d. Record the values of Fmin and Fmax for capacitor ranging from 15 Pf  to 365 P
 import java.nio.file.*;
 import java.io.IOException; 
 
-public class Homework_6 {
-
-	public static void main(String[] args) throws IOException{
-		// TODO Auto-generated method stub
-		String Record = "TuningCircuit"; 
+public static void main(String[] args) throws IOException{
+		
+		// This is the main method
 		//let create the object
 	TuningCircuit cr = new TuningCircuit(); 
 		
 		cr.generate(); 
 		
 		cr.save(); 
+	//Print data that exists
 	System.out.println("\nGenerated");
 	cr.print(); 
 	
+	//Print data after the modification
 	 System.out.println("\nModified database:");
-     cr.print();//Print database after the modification
+     cr.print();
 
-     //close input stream(opened by constructor)
+
+     //close input stream that was opened by the constructor
      cr.close();
 
-     System.exit(0);
-	}
 
-}
+     System.exit(0);
+} // End of Class
+
+} //  
